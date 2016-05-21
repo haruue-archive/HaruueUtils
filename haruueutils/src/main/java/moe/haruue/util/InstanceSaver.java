@@ -68,7 +68,7 @@ public class InstanceSaver implements Serializable {
     }
 
     /**
-     * 从外部状态恢复全局单例，请添加以下代码到 {@link android.app.Activity} 的子类中，如果继承 {@link moe.haruue.redrockexam.util.abstracts.HaruueActivity} 则无需添加
+     * 从外部状态恢复全局单例，请添加以下代码到 {@link android.app.Activity} 的子类中，如果继承 {@link moe.haruue.util.abstracts.HaruueActivity} 则无需添加
      * {@code
      *      @Override
      *          protected void onRestoreInstanceState(Bundle savedInstanceState) {
@@ -76,7 +76,7 @@ public class InstanceSaver implements Serializable {
      *          InstanceSaver.saveInstance(savedInstanceState);
      *      }
      * }
-     * @param savedInstance
+     * @param savedInstance 存储实例的外部状态
      */
     public static void restoreInstance(Bundle savedInstance) {
         for (InstanceSavable i: saver.models) {
