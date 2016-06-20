@@ -10,32 +10,32 @@ import moe.haruue.util.abstracts.HaruueActivity;
 
 /**
  * Activity 管理器<br>
- *     请在 {@link Application} 子类中进行初始化，使用 {@link ActivityManager#initialize()} <br>
+ *     请在 {@link Application} 子类中进行初始化，使用 {@link ActivityCollector#initialize()} <br>
  *     您可以让 Activity 继承 {@link HaruueActivity} 或者在每个 {@link Activity} 里加入 {@code
  *
  *         @Override
  *         protected void onCreate(Bundle savedInstanceState) {
  *             super.onCreate(savedInstanceState);
- *             ActivityManager.push(this);
+ *             ActivityCollector.push(this);
  *         }
  *
  *         @Override
  *             protected void onDestroy() {
  *             super.onDestroy();
- *             ActivityManager.pop(this);
+ *             ActivityCollector.pop(this);
  *         }
  *
  *     }
  *
  * @author Haruue Icymoon haruue@caoyue.com.cn
  */
-public class ActivityManager {
+public class ActivityCollector {
 
-    private static ActivityManager manager;
+    private static ActivityCollector manager;
 
     private ArrayList<Activity> activities = new ArrayList<>(0);
 
-    private ActivityManager() {
+    private ActivityCollector() {
 
     }
 
@@ -43,11 +43,11 @@ public class ActivityManager {
      * 加入 {@link Application#onCreate()} 中以进行初始化
      */
     public static void initialize() {
-        manager = new ActivityManager();
+        manager = new ActivityCollector();
     }
 
     /**
-     * 加入 {@link Activity#onCreate(Bundle)} 中来让 {@link ActivityManager} 管理这个 Activity
+     * 加入 {@link Activity#onCreate(Bundle)} 中来让 {@link ActivityCollector} 管理这个 Activity
      * @param activity Activity 中的 this 引用
      */
     public static void push(Activity activity) {
@@ -55,7 +55,7 @@ public class ActivityManager {
     }
 
     /**
-     * 加入 {@link Activity#onDestroy()} 来将 Activity 从 {@link ActivityManager} 中移除
+     * 加入 {@link Activity#onDestroy()} 来将 Activity 从 {@link ActivityCollector} 中移除
      * @param activity Activity 中的 this 引用
      */
     public static void pop(Activity activity) {
@@ -102,7 +102,7 @@ public class ActivityManager {
     }
 
     /**
-     * 获取 Activity Array 的拷贝，对该拷贝的任何更改都不会影响到 {@link ActivityManager}
+     * 获取 Activity Array 的拷贝，对该拷贝的任何更改都不会影响到 {@link ActivityCollector}
      * @return Activity Array 的一个拷贝
      */
     public static ArrayList<Activity> getActivities() {

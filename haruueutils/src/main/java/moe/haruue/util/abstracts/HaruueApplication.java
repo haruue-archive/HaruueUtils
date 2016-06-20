@@ -2,7 +2,7 @@ package moe.haruue.util.abstracts;
 
 import android.app.Application;
 
-import moe.haruue.util.ActivityManager;
+import moe.haruue.util.ActivityCollector;
 import moe.haruue.util.InstanceSaver;
 import moe.haruue.util.StandardUtils;
 import moe.haruue.util.ThreadUtils;
@@ -17,7 +17,7 @@ public abstract class HaruueApplication extends Application {
     public void onCreate() {
         super.onCreate();
         StandardUtils.initialize(this);
-        ActivityManager.initialize();
+        ActivityCollector.initialize();
         InstanceSaver.initialize();
         ThreadUtils.initialize(this);
     }

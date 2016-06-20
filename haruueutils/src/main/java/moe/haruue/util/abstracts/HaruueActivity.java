@@ -6,7 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import moe.haruue.util.ActivityManager;
+import moe.haruue.util.ActivityCollector;
 import moe.haruue.util.InstanceSaver;
 import moe.haruue.util.StandardUtils;
 import moe.haruue.util.ThreadUtils;
@@ -20,7 +20,7 @@ public abstract class HaruueActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityManager.push(this);
+        ActivityCollector.push(this);
         StandardUtils.initializeInActivity(this);
     }
 
@@ -39,7 +39,7 @@ public abstract class HaruueActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityManager.pop(this);
+        ActivityCollector.pop(this);
         ThreadUtils.onActivityDestroy(this);
     }
 
