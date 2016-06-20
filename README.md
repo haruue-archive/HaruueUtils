@@ -15,7 +15,10 @@ repositories {
 }
 
 dependencies {
+    // 稳定版本
     compile 'moe.haruue:haruueutils:1.0.0'
+    // 开发中的最新版本
+    compile 'moe.haruue:haruueutils:1.1.+'
 }
 
 ```

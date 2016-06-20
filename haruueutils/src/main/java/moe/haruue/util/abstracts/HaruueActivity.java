@@ -40,7 +40,7 @@ public abstract class HaruueActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         ActivityCollector.pop(this);
-        ThreadUtils.onActivityDestroy(this);
+        ThreadUtils.interruptThreadsByObject(this, true);
     }
 
     /**
