@@ -8,7 +8,7 @@ android {
         minSdkVersion 11
         targetSdkVersion 24
         versionCode 1
-        versionName '1.1.0-preview'
+        versionName '1.1.1-preview'
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -39,7 +39,7 @@ ext {
     siteUrl = 'https://github.com/haruue/HaruueUtils'
     gitUrl = 'https://github.com/haruue/HaruueUtils'
 
-    libraryVersion = '1.1.0-preview'//版本号
+    libraryVersion = '1.1.1-preview'//版本号
     libraryName = 'HaruueUtils'//项目名字，没什么用
     libraryDescription = 'Haruue\'s framework and utils for android.'//项目描述，没什么用
 

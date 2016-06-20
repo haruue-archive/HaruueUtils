@@ -79,7 +79,6 @@ public class ThreadUtils {
     public static Thread runOnNewThread(Object object, Runnable runnable) {
         Thread thread = runOnNewThread(runnable);
         bindThreadWithObject(thread, object);
-        thread.start();
         return thread;
     }
 
