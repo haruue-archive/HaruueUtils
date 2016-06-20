@@ -48,13 +48,15 @@ public class InstanceSaver implements Serializable {
 
     /**
      * 保存单例到 savedInstance ，请添加以下代码到 {@link android.app.Activity} 的子类中，如果继承 {@link moe.haruue.util.abstracts.HaruueActivity} 则无需再添加
-     * {@code
-     *      @Override
+     * <code>
+     *
+     *      \@Override
      *      protected void onSaveInstanceState(Bundle outState) {
      *          super.onSaveInstanceState(outState);
      *          InstanceSaver.saveInstance(outState);
      *      }
-     * }
+     *
+     * </code>
      * @param outState 存储实例的外部状态
      */
     public static void saveInstance(Bundle outState) {
@@ -69,13 +71,14 @@ public class InstanceSaver implements Serializable {
 
     /**
      * 从外部状态恢复全局单例，请添加以下代码到 {@link android.app.Activity} 的子类中，如果继承 {@link moe.haruue.util.abstracts.HaruueActivity} 则无需添加
-     * {@code
-     *      @Override
+     * <code>
+     *      \@Override
      *          protected void onRestoreInstanceState(Bundle savedInstanceState) {
      *          super.onRestoreInstanceState(savedInstanceState);
      *          InstanceSaver.saveInstance(savedInstanceState);
      *      }
      * }
+     * </code>
      * @param savedInstance 存储实例的外部状态
      */
     public static void restoreInstance(Bundle savedInstance) {

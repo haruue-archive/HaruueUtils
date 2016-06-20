@@ -6,6 +6,20 @@
 ~~其实总的看了下也就还有这个模块有些卵用~~    
 因此我把这个模块单独拿出来，虽然功能很不完善，但是我仍然希望继续完善它。。。
 
+## Download
+``` Gradle
+repositories {
+    maven {
+        url 'https://dl.bintray.com/haruue/maven/'
+    }
+}
+
+dependencies {
+    compile 'moe.haruue:haruueutils:1.0.0'
+}
+
+```
+
 ## Function
 | 类 | 功能 |
 |--------------------|--------------------|

@@ -11,21 +11,21 @@ import moe.haruue.util.abstracts.HaruueActivity;
 /**
  * Activity 管理器<br>
  *     请在 {@link Application} 子类中进行初始化，使用 {@link ActivityCollector#initialize()} <br>
- *     您可以让 Activity 继承 {@link HaruueActivity} 或者在每个 {@link Activity} 里加入 {@code
+ *     您可以让 Activity 继承 {@link HaruueActivity} 或者在每个 {@link Activity} 里加入 <code>
  *
- *         @Override
+ *         \@Override
  *         protected void onCreate(Bundle savedInstanceState) {
  *             super.onCreate(savedInstanceState);
  *             ActivityCollector.push(this);
  *         }
  *
- *         @Override
+ *         \@Override
  *             protected void onDestroy() {
  *             super.onDestroy();
  *             ActivityCollector.pop(this);
  *         }
  *
- *     }
+ *     </code>
  *
  * @author Haruue Icymoon haruue@caoyue.com.cn
  */

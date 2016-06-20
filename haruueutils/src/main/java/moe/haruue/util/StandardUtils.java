@@ -47,7 +47,7 @@ public class StandardUtils {
 
     /**
      * 设定是否为 Debug 模式
-     * @param isDebug true 则为 Debug 模式，可直接传入项目的 {@link BuildConfig#DEBUG}
+     * @param isDebug true 则为 Debug 模式，可直接传入项目的 BuildConfig.DEBUG
      */
     public static void setDebug(boolean isDebug) {
         utils.isDebug = isDebug;
@@ -173,7 +173,7 @@ public class StandardUtils {
 
     /**
      * 获取当前的语言国家代码，如 zh-CN，en-US 等等
-     * @return
+     * @return 当前语言国家代码
      */
     public static String getLanguageCountryCode() {
         Locale locale = Locale.getDefault();
